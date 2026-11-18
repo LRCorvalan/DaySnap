@@ -163,6 +163,39 @@ footer a { color: inherit; text-underline-offset: 3px }
   a.badge {
   text-decoration: none;
 }
+
+
+
+
+.app-store-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+.app-store-link img {
+  width: 180px;
+  height: auto;
+}
+
+.store-badge-light {
+  display: var(--logo-light);
+}
+
+.store-badge-dark {
+  display: var(--logo-dark);
+}
+
+
+  
+.end .store-badge-light {
+  display: none;
+}
+
+.end .store-badge-dark {
+  display: inline-block;
+}
+
+
   
 </style>
 
@@ -183,12 +216,20 @@ footer a { color: inherit; text-underline-offset: 3px }
       <h1>Three seconds a day. <em>A year you can watch.</em></h1>
       <p class="lede">DaySnap records one 3-second video each day and keeps them all in one place, so you can look back at your days over time.</p>
       
-<a class="badge"
+
+<a class="app-store-link"
    href="https://apps.apple.com/us/app/daysnap-one-clip-a-day/id6831368233"
    target="_blank"
-   rel="noopener noreferrer">
-  Download DaySnap for iPhone
+   rel="noopener noreferrer"
+   aria-label="Download DaySnap on the App Store">
+  <img class="store-badge-light"
+       src="assets/app-store-black.svg"
+       alt="Download on the App Store">
+  <img class="store-badge-dark"
+       src="assets/app-store-white.svg"
+       alt="">
 </a>
+
 
     </div>
     <div class="camera-col">
@@ -253,12 +294,21 @@ footer a { color: inherit; text-underline-offset: 3px }
 
     <p>Built natively for iPhone. Start capturing your memories today.</p>
 
-    <a class="badge"
-       href="https://apps.apple.com/us/app/daysnap-one-clip-a-day/id6831368233"
-       target="_blank"
-       rel="noopener noreferrer">
-      Download DaySnap for iPhone
-    </a>
+    
+<a class="app-store-link"
+   href="https://apps.apple.com/us/app/daysnap-one-clip-a-day/id6831368233"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Download DaySnap on the App Store">
+  <img class="store-badge-light"
+       src="assets/app-store-black.svg"
+       alt="Download on the App Store">
+  <img class="store-badge-dark"
+       src="assets/app-store-white.svg"
+       alt="">
+</a>
+
+    
   </div>
 </div>
 
