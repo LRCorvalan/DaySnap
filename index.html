@@ -131,6 +131,39 @@ footer a { color: inherit; text-underline-offset: 3px }
   .shot { width: min(270px, 100%) }
 }
 @media (max-width: 400px) { .soon { display: none } }
+  
+.app-store-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font: 600 .875rem var(--body);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s;
+}
+
+.app-store-btn:hover {
+  background: var(--blue-deep);
+}
+
+@media (max-width: 400px) {
+  .app-store-btn {
+    padding: 10px 12px;
+    font-size: .75rem;
+  }
+  .brand .word {
+    height: 26px;
+  }
+}
+  
+  a.badge {
+  text-decoration: none;
+}
+  
 </style>
 
 <style>body{margin:0}img{max-width:100%}</style>
@@ -238,6 +271,14 @@ footer a { color: inherit; text-underline-offset: 3px }
   </div>
 </div>
 
+<footer>
+  <div class="wrap">
+    <span>© 2026 CorvalanTech</span>
+    <span class="foot-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </span>
+  </div>
 </footer>
 
 <script>
@@ -272,7 +313,7 @@ function show(days) {
   dayLabel.textContent = `of video from ${days} day${days === 1 ? '' : 's'}`;
   buttons.forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.d === days)));
 }
-
+  
 slider.addEventListener('input', () => show(+slider.value));
 buttons.forEach(b => b.addEventListener('click', () => show(+b.dataset.d)));
 show(365);
